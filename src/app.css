@@ -1,0 +1,16 @@
+.App {
+  background: url("./assets/home/background-home-mobile.jpg") no-repeat center;
+  background-size: cover;
+}
+@media (min-width: 664px) {
+  .App {
+    background: url("./assets/home/background-home-tablet.jpg") no-repeat center;
+    background-size: cover;
+  }
+}
+@media (min-width: 1024px) {
+  .App {
+    background: url("./assets/home/background-home-desktop.jpg") no-repeat center;
+    background-size: cover;
+  }
+}
