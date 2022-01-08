@@ -2,25 +2,21 @@ export const navData = [
   {
     name: 'HOME',
     path: '/',
-    className: '.nav-text',
-    number: '0',
+    number: '00',
   },
   {
     name: 'DESTINATION',
     path: '/destination',
-    className: '.nav-text',
-    number: '1',
+    number: '01',
   },
   {
     name: 'CREW',
     path: '/crew',
-    className: '.nav-text',
-    number: '2',
+    number: '02',
   },
   {
     name: 'TECHNOLOGY',
     path: '/technology',
-    className: '.nav-text',
-    number: '3',
+    number: '03',
   }
 ]

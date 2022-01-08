@@ -1,20 +1,13 @@
-import NavItem from "./NavItem";
-import { navData } from "./navData";
+import NavListContainer from './NavListContainer';
+import NavBtn from './NavBtn';
+import './nav.css';
 
 export default function Nav(){
   return (
-    <ul>
-      {
-        navData.map(({name, path, className, number}) => 
-          <NavItem
-            name={name}
-            path={path}
-            className={className}
-            number={number}
-            key={`1${number}`}
-          />
-        )
-      }
-    </ul>
+    <nav className="nav">
+      <NavListContainer />
+
+      <NavBtn isOpen={false} cName={"nav__open"} />
+    </nav>
   )
 }

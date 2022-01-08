@@ -1,11 +1,6 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes
-} from "react-router-dom";
 import Nav from './navigator/Nav';
 import logo from '../assets/shared/logo.svg';
-import Home from '../pages/home/Home'
+import './header.css';
 
 export default function Header(){
   return (
@@ -14,17 +9,7 @@ export default function Header(){
 
       <span className='header__line'></span>
 
-      <Router>
-        <Nav />
-
-        <Routes>
-          <Route path="/" element={Home}>
-          </Route>
-          <Route path="/crew">
-          </Route>
-        </Routes>
-      </Router>
-
-    </header>
+      <Nav />            
+    </header> 
   )
 }
