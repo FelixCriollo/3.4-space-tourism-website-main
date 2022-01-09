@@ -1,0 +1,112 @@
+.home {
+  padding-top: 14px;
+  height: calc(100% - 88px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  margin: 16px 0 24px 0;
+}
+.explore {
+  display: block;
+  background: var(--lighter);
+  color: var(--strong);
+  font-family: "Bellefair", serif;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 1000px;
+  padding:  68px 32px 59px 32px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* TABLE */
+@media (min-width: 664px) {
+  .home {
+    padding: 70px 39px 80px 0;
+    height: calc(100% - 130px);
+  }
+  .title {
+    margin: 16px 0 12px 0;
+  }
+  .home .relevant-info {
+    width: 444px;
+  }
+  .explore {
+    font-size: 32px;
+    letter-spacing: 2px;
+    padding:  103px 46px 103px 48px;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .home {
+    padding: 0;
+    padding-right: 4.5%;
+    padding-left: 1%;
+    padding-top: 14.8vh;
+    padding-bottom: 14.8vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1180px;
+    height: auto;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .title {
+    margin: 24px 0 24px 0;
+  }
+  .explore {
+    position: relative;
+    margin-bottom: 0;
+    padding:  119px 64px 118px 62px;
+  }
+  .explore:hover::before {
+    position: absolute;
+    content: '';
+    width: 275px;
+    height: 274px;
+    border-radius: 1000px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: home-pulse 1.2s infinite;
+    z-index: -1;
+  }
+  .explore:hover::after {
+    position: absolute;
+    content: '';
+    width: 275px;
+    height: 274px;
+    border-radius: 1000px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: home-pulse-2 1.2s infinite;
+    z-index: -1;
+  }
+  @keyframes home-pulse {
+    0% {
+      background: #fff;
+    }
+    100% {
+      width: 310px;
+      height: 310px;
+      background: transparent;
+    }
+  }
+  @keyframes home-pulse-2 {
+    0% {
+      background: #fff;
+    }
+    100% {
+      width: 360px;
+      height: 360px;
+      background: transparent;
+    }
+  }
+}

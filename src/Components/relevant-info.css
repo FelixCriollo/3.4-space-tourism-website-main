@@ -1,0 +1,20 @@
+.relevant-info {
+  width: 100%;
+  line-height: 25px;
+  color: var(--middle);
+}
+
+@media (min-width: 664px) {
+  .relevant-info {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .relevant-info {
+    text-align: left;
+    font-size: 18px;
+    line-height: 32px;
+  }
+}

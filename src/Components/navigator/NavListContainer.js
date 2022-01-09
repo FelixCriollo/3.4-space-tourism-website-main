@@ -12,11 +12,11 @@ export default function NavListContainer() {
           {
             navData.map(({name, path, number}) => 
             <NavItem
-            name={name}
-            path={path}
-            onPath={pathName === path ? 'nav__text--onPath' : ''}
-            number={number}
-            key={`1${number}`}
+              name={name}
+              path={path}
+              onPath={pathName === path ? 'nav__text--onPath' : ''}
+              number={number}
+              key={`1${number}`}
             />
             ) 
           }

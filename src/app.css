@@ -1,26 +1,40 @@
-.App {
-  position: relative;
+body {
   background: url("./assets/home/background-home-mobile.jpg") no-repeat center;
   background-size: cover;
+}
+.App {
+  position: relative;
   padding: 24px;
   margin: 0 auto;
   overflow-x: hidden;
   height: 100vh;
 }
+.container {
+  text-align: center;
+  margin-top: 34px;
+}
 @media (min-width: 664px) {
-  .App {
+  body {
     background: url("./assets/home/background-home-tablet.jpg") no-repeat center;
     background-size: cover;
+  }
+  .App {
     padding: 0;
     padding-left: 39px;
   }
 }
 @media (min-width: 1024px) {
-  .App {
+  body {
     background: url("./assets/home/background-home-desktop.jpg") no-repeat center;
     background-size: cover;
+  }
+  .App {
     width: 100%;
     max-width: 1440px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 0 auto;
     padding-left: 3.8%;
     padding-top: 2.9%;
