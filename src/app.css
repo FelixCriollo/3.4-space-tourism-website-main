@@ -1,5 +1,5 @@
 body {
-  background: url("./assets/home/background-home-mobile.jpg") no-repeat center;
+  background: url("./assets/home/background-home-mobile.jpg") no-repeat center, var(--strong);
   background-size: cover;
 }
 .App {
@@ -11,32 +11,36 @@ body {
 }
 .container {
   text-align: center;
-  margin-top: 34px;
+  margin-top: 24px;
 }
 @media (min-width: 664px) {
   body {
-    background: url("./assets/home/background-home-tablet.jpg") no-repeat center;
+    background: url("./assets/home/background-home-tablet.jpg") no-repeat center, var(--strong);
     background-size: cover;
   }
   .App {
     padding: 0;
     padding-left: 39px;
   }
+  .container {
+    height: calc(100% - 130px);
+    min-height: 824px;
+  }
 }
 @media (min-width: 1024px) {
   body {
-    background: url("./assets/home/background-home-desktop.jpg") no-repeat center;
+    background: url("./assets/home/background-home-desktop.jpg") no-repeat center, var(--strong);
     background-size: cover;
   }
   .App {
     width: 100%;
     max-width: 1440px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0 auto;
     padding-left: 3.8%;
     padding-top: 2.9%;
+  }
+  .container {
+    margin: auto;
+    height: auto;
+    min-height: 0;
   }
 }

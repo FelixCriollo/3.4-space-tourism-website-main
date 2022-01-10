@@ -1,6 +1,16 @@
 .subtitle {
   color: var(--middle);
 }
+.destination .subtitle {
+  color: var(--lighter);
+} 
+.subtitle__number {
+  opacity: 0.25;
+  margin-right: 18px;
+}
+.home .subtitle__number {
+  margin-right: 0px;
+} 
 
 @media (min-width: 664px) {
   .subtitle {
