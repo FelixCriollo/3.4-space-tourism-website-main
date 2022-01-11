@@ -1,0 +1,26 @@
+.desti-list {
+  margin: 0 20px 0 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.desti-item {
+  color: var(--middle);
+  font-size: 14px;
+  letter-spacing: 2.36px;
+}
+
+@media (min-width: 664px) {
+  .desti-list {
+    width: 368px;
+    margin: 0 auto 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .desti-list {
+    margin: 0;
+    width: 285px;
+    justify-content: space-between;
+  }
+  
+}

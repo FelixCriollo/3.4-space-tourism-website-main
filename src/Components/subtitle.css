@@ -25,4 +25,7 @@
     letter-spacing: 4.72px;
     text-align: left;
   }
+  .subtitle__number {
+    margin-right: 28px;
+  }
 }
