@@ -1,7 +1,3 @@
-body {
-  background: url("./assets/home/background-home-mobile.jpg") no-repeat center, var(--strong);
-  background-size: cover;
-}
 .App {
   position: relative;
   padding: 24px;
@@ -13,10 +9,6 @@ body {
   margin-top: 24px;
 }
 @media (min-width: 664px) {
-  body {
-    background: url("./assets/home/background-home-tablet.jpg") no-repeat center, var(--strong);
-    background-size: cover;
-  }
   .App {
     padding: 0;
     padding-left: 39px;
@@ -27,10 +19,6 @@ body {
   }
 }
 @media (min-width: 1024px) {
-  body {
-    background: url("./assets/home/background-home-desktop.jpg") no-repeat center, var(--strong);
-    background-size: cover;
-  }
   .App {
     width: 100%;
     max-width: 1440px;

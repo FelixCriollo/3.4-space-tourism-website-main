@@ -28,7 +28,6 @@
   order: -1;
   width: 88px;
   height: 10px;
-  background: red;
   margin: auto;
   margin-bottom: 32px;
   display: flex;
@@ -39,6 +38,9 @@
   height: 10px;
   background: #979797;
   border-radius: 100px;
+}
+.control--on {
+  background: var(--lighter);
 }
 .crew-info__name {
   text-transform: uppercase ;
@@ -73,6 +75,7 @@
     margin-top: 50px;
     transform: translateX(-50%);
     width: 51vw;
+    max-height: 491px;
   }
   .crew-controls {
     order: 0;
@@ -107,7 +110,7 @@
     width: 38vw;
     top: 8vw;
     max-height: 643px;
-    max-width: 547px;
+    max-width: auto;
   }
   .crew-info__role {
     margin-top: 17.5vh;
@@ -122,5 +125,10 @@
     margin-top: 10vh;
     height: 15px;
     width: 132px;
+  }
+  .control {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
   }
 }

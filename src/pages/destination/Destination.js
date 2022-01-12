@@ -1,30 +1,59 @@
+import { useEffect, useState } from "react"; 
+import { destinationsData } from '../../services/pageDatas';
 import RelevantInfo from '../../Components/RelevantInfo';
 import SubTitle from '../../Components/SubTitle';
 import MoreInfo from '../../Components/MoreInfo';
-import DestinationList from '../../Components/content-navs/DestinationList';
+import './destinations-list.css';
 import './destintation.css';
 
+const planetImg = require.context('../../assets/destination', true);
+
 export default function Destination() {
+  const [desti, setDesti] = useState([]);
+  const [picture, setPicture] = useState("")
+
+  const getData = async (pos) => {
+    const res = await destinationsData();
+    const destiny = await res[pos]
+    setDesti(destiny);
+    setPicture(destiny.images)
+  }
+
+  useEffect(() => {
+    getData(0);
+  }, [])
+
+  const destiHandler = (e) => {
+    const desti = document.querySelectorAll(".desti-item--active");
+
+    desti.forEach(el => el.classList.remove("desti-item--active"));
+    e.target.classList.add("desti-item--active");
+  }
+
   return (
     <div className="container destination" id='destination'>
       <div className="destination-first">
         <SubTitle text={"PICK YOUR DESTINATION"} number={"01"}/>
 
         <img className='destination__img' 
-          src={require("../../assets/destination/image-moon.png")} alt=""/>
+          src={
+            planetImg(`./${picture.png === undefined ? "image-moon.png" : picture.png}`)
+          } alt={desti.name}/>
       </div>
 
       <article className="destination-second">
-        <DestinationList />
+        <ul className='desti-list'>
+          <li className="desti-item desti-item--active" onClick={(e) => {getData(0); destiHandler(e)}}>MOON</li>
+          <li className="desti-item" onClick={(e) => {getData(1); destiHandler(e)}}>MARS</li>
+          <li className="desti-item" onClick={(e) => {getData(2); destiHandler(e)}}>EUROPA</li>
+          <li className="desti-item" onClick={(e) => {getData(3); destiHandler(e)}}>TITAN</li>
+        </ul>
+ 
+        <h2 className='destination__title'>{desti.name}</h2>
 
-        <h2 className='destination__title'>EUROPA</h2>
+        <RelevantInfo text={desti.description} />
 
-        <RelevantInfo 
-          text={"The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin."}
-        />
-
-        {/* A div with mora data */}
-        <MoreInfo distance={"384,400 kM"} time={"3 DAYS"}/>
+        <MoreInfo distance={desti.distance} time={desti.travel}/>
       </article>
     </div>
   )

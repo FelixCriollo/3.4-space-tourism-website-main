@@ -9,6 +9,7 @@ import Crew from './pages/crew/Crew';
 import Destintation from './pages/destination/Destination';
 import Technology from './pages/technology/Technology';
 import './app.css';
+import './body-bg.css';
 
 function App() {
   return (

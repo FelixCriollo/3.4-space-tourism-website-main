@@ -1,8 +1,24 @@
 import RelevantInfo from "../../Components/RelevantInfo";
 import SubTitle from "../../Components/SubTitle";
+import { technologyData } from '../../services/pageDatas';
+import { useEffect, useState } from "react"; 
 import './technology.css';
 
 export default function Technology() {
+  const [tech, setTech] = useState([]);
+  const [picture, setPicture] = useState("")
+
+  const getData = async (pos) => {
+    const res = await technologyData();
+    const tech = await res[pos]
+    setTech(tech);
+    setPicture(tech.images)
+  }
+
+  useEffect(() => {
+    getData(0);
+  }, [])
+
   const changeImg = () => {
     const isPortrait = window.screen.width;
     return isPortrait < 1024 ? (
@@ -10,6 +26,13 @@ export default function Technology() {
       ) : (
         require("../../assets/technology/image-space-capsule-portrait.jpg")
     )
+  }
+
+  const techHandler = (e) => {
+    const tech = document.querySelector(".tech-item--active");
+
+    tech.classList.remove("tech-item--active");
+    e.target.classList.add("tech-item--active");
   }
 
   return (
@@ -21,17 +44,17 @@ export default function Technology() {
 
         <section className="technology-info__data">
           <div className="change-tech">
-            <span className="tech-item"></span>
-            <span className="tech-item"></span>
-            <span className="tech-item"></span>
+            <span className="tech-item tech-item--active" onClick={(e)=>{getData(0); techHandler(e)}}>1</span>
+            <span className="tech-item" onClick={(e)=>{getData(1); techHandler(e)}}>2</span>
+            <span className="tech-item" onClick={(e)=>{getData(2); techHandler(e)}}>3</span>
           </div>
 
           <div className="technology-info__body">
             <p className="subHeading2">THE TERMINOLOGY…</p>
 
-            <p className="tech-name">LAUNCH VEHICLE</p>
+            <p className="tech-name">{tech.name}</p>
 
-            <RelevantInfo text={"A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch"}/>
+            <RelevantInfo text={tech.description}/>
           </div>
         </section>
       </div>

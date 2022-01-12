@@ -5,17 +5,23 @@ import NavBtn from "./NavBtn";
 
 export default function NavListContainer() {
   const pathName = useLocation().pathname;
-  // console.log(pathName)
+  const bodyApp = document.querySelector("body");
   
-  // const changeBg = () => {
-  //   const app = document.querySelector("body");
-  //   const pathN = pathName.slice(1)
-    
-  //   console.log(typeof app);
-  //   console.log(app);
-  // };
+  bodyApp.classList.remove("body-home")
+  bodyApp.classList.remove("body-crew")
+  bodyApp.classList.remove("body-technology")
+  bodyApp.classList.remove("body-destination")
   
-  // changeBg();
+  if (pathName === "/") {
+    bodyApp.classList.add("body-home");
+  } else if (pathName === "/crew") {
+    bodyApp.classList.add("body-crew");
+  } else if (pathName === "/technology") {
+    bodyApp.classList.add("body-technology");
+  } else if (pathName === "/destination") {
+    bodyApp.classList.add("body-destination");
+  }
+
 
   return (
     <div className="nav-list-container">

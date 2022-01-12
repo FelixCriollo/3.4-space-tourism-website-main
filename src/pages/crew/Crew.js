@@ -1,8 +1,8 @@
 import SubTitle from "../../Components/SubTitle";
 import RelevantInfo from '../../Components/RelevantInfo';
-import {crewData} from '../../services/pageDatas'
+import { crewData } from '../../services/pageDatas';
+import { useEffect, useState } from "react"; 
 import './crew.css';
-import { useEffect, useState } from "react";
 
 export default function Crew() {
   const [crewM, setCrewM] = useState([])
@@ -13,6 +13,13 @@ export default function Crew() {
     const crewMember = await res[pos]
     setCrewM(crewMember);
     setPhoto(crewMember.images)
+  }
+
+  const contrlHandler = (e) => {
+    const contrl = document.querySelectorAll(".control--on");
+
+    contrl.forEach(el => el.classList.remove("control--on"));
+    e.target.classList.add("control--on");
   }
 
   useEffect(() => {
@@ -34,10 +41,10 @@ export default function Crew() {
           />
 
           <div className="crew-controls">
-            <span className="control" onClick={() => getData(0)}></span>
-            <span className="control" onClick={() => getData(1)}></span>
-            <span className="control" onClick={() => getData(2)}></span>
-            <span className="control" onClick={() => getData(3)}></span>
+            <span className="control control--on" onClick={(e) => {getData(0); contrlHandler(e)}} />
+            <span className="control" onClick={(e) => {getData(1); contrlHandler(e)}} />
+            <span className="control" onClick={(e) => {getData(2); contrlHandler(e)}} />
+            <span className="control" onClick={(e) => {getData(3); contrlHandler(e)}} />
           </div>
         </section>
 

@@ -4,10 +4,22 @@
   justify-content: space-evenly;
 }
 .desti-item {
+  position: relative;
   color: var(--middle);
   font-size: 14px;
   letter-spacing: 2.36px;
 }
+.desti-item + .desti-item--active {
+  color: var(--lighter);
+}
+.desti-item--active::before {
+  position: absolute;
+  content: '';
+  background: var(--lighter);
+  width: 100%;
+  height: 3px;
+  transform: translateY(25px);
+} 
 
 @media (min-width: 664px) {
   .desti-list {
@@ -22,5 +34,7 @@
     width: 285px;
     justify-content: space-between;
   }
-  
+  .desti-item {
+    cursor: pointer;
+  }
 }

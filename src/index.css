@@ -39,7 +39,8 @@ h1,
 h2,
 h3,
 h4,
-.sub-heading1 {
+.sub-heading1,
+.tech-item {
   font-family: "Bellefair", serif;
   color: var(--lighter);
 }
