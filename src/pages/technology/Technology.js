@@ -3,7 +3,6 @@ import SubTitle from "../../Components/SubTitle";
 import './technology.css';
 
 export default function Technology() {
-  console.log(window.screen.width);
   const changeImg = () => {
     const isPortrait = window.screen.width;
     return isPortrait < 1024 ? (

@@ -1,5 +1,3 @@
-// import { useEffect, useState } from 'react';
-// import { destinationsData } from '../../services/pageDatas';
 import RelevantInfo from '../../Components/RelevantInfo';
 import SubTitle from '../../Components/SubTitle';
 import MoreInfo from '../../Components/MoreInfo';
@@ -7,16 +5,6 @@ import DestinationList from '../../Components/content-navs/DestinationList';
 import './destintation.css';
 
 export default function Destination() {
-  // const [data, setData] = useState([]);
-
-  // useEffect(function () {
-  //   destinationsData()
-  //     .then(destiny => setData(destiny[0]));
-  // }, [])    
-
-  // console.log(data.images.png);
-  // const {name, image, description, distance, travel } = data;
-
   return (
     <div className="container destination" id='destination'>
       <div className="destination-first">

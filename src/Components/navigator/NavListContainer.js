@@ -5,6 +5,17 @@ import NavBtn from "./NavBtn";
 
 export default function NavListContainer() {
   const pathName = useLocation().pathname;
+  // console.log(pathName)
+  
+  // const changeBg = () => {
+  //   const app = document.querySelector("body");
+  //   const pathN = pathName.slice(1)
+    
+  //   console.log(typeof app);
+  //   console.log(app);
+  // };
+  
+  // changeBg();
 
   return (
     <div className="nav-list-container">

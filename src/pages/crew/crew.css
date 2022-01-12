@@ -31,6 +31,14 @@
   background: red;
   margin: auto;
   margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+.control {
+  width: 10px;
+  height: 10px;
+  background: #979797;
+  border-radius: 100px;
 }
 .crew-info__name {
   text-transform: uppercase ;

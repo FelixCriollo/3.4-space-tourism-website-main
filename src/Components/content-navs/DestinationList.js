@@ -9,6 +9,7 @@ export default function DestinationList() {
         destinations.map(text => <DestinationItem 
           text={text}
           cName={"desti-item--active"} 
+          key={`1232${text}`}
         />)
       }
     </ul>

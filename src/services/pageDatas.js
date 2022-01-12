@@ -1,8 +1,8 @@
 import data from "./data"
 
 // Returns a object with the crew data of the page
-export function crewData () {
-  return data().then(data => data.crew)
+export async function crewData () {
+  return await data().then(data => data.crew)
 } 
 // Returns a object with the technologies data of the page
 export function technologyData () {
