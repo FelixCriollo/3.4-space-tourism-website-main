@@ -4,6 +4,8 @@ import { crewData } from '../../services/pageDatas';
 import { useEffect, useState } from "react"; 
 import './crew.css';
 
+const crewImg = require.context('../../assets/crew', true);
+
 export default function Crew() {
   const [crewM, setCrewM] = useState([])
   const [photo, setPhoto] = useState("")
@@ -48,7 +50,9 @@ export default function Crew() {
           </div>
         </section>
 
-        <img className="crew-photo" src={require("../../assets/crew/image-mark-shuttleworth.png")} alt=""/>
+        <img className="crew-photo" src={
+          crewImg(`./${photo.png === undefined ? "image-douglas-hurley.png" : photo.png}`)
+        } alt={crewM.name}/>
       </div>
     </div>
   )

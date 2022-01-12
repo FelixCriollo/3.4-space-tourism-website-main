@@ -4,6 +4,8 @@ import { technologyData } from '../../services/pageDatas';
 import { useEffect, useState } from "react"; 
 import './technology.css';
 
+const techImg = require.context('../../assets/technology', true);
+
 export default function Technology() {
   const [tech, setTech] = useState([]);
   const [picture, setPicture] = useState("")
@@ -18,21 +20,25 @@ export default function Technology() {
   useEffect(() => {
     getData(0);
   }, [])
-
-  const changeImg = () => {
-    const isPortrait = window.screen.width;
-    return isPortrait < 1024 ? (
-      require("../../assets/technology/image-space-capsule-landscape.jpg")
-      ) : (
-        require("../../assets/technology/image-space-capsule-portrait.jpg")
-    )
-  }
-
+  
   const techHandler = (e) => {
     const tech = document.querySelector(".tech-item--active");
 
     tech.classList.remove("tech-item--active");
     e.target.classList.add("tech-item--active");
+  }
+
+  const changeImg = () => {
+    const isPortrait = window.screen.width;
+    return isPortrait < 1024 ? (
+      techImg(`./${picture.landscape === undefined ? (
+          "image-launch-vehicle-landscape.jpg"
+        ) : picture.landscape}`)
+      ) : (
+      techImg(`./${picture.portrait === undefined ? (
+          "image-launch-vehicle-portrait.jpg" 
+        ) : picture.portrait}`)
+    )
   }
 
   return (
