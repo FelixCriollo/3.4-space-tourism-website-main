@@ -25,21 +25,22 @@
   .destination .subtitle {
     text-align: left;
   }
-  .destination__img {
-    margin-top: 60px;
-    width: 43%;
-  }
   .destination-first {
     margin-bottom: 30px;
     padding-top: 10px;
   }
-  .destination__title {
-    margin: 52px auto 0 auto;
-  }  
   .destination-second .relevant-info{ 
     width: 574px;
     margin: auto;
   }
+
+  .destination__img {
+    margin-top: 60px;
+    width: 43%;
+  }
+  .destination__title {
+    margin: 52px auto 0 auto;
+  }  
 }
 
 @media (min-width: 1024px) {
@@ -63,6 +64,14 @@
     display: flex;
     flex-direction: column;
   }
+  .destination-second {
+    align-items: center;
+    width: 445px;
+  }
+  .destination-second .relevant-info {
+    width: 100%;
+  }
+  
   .destination__title {
     text-align: left;
     margin: 52px 0 10px 0;
@@ -71,12 +80,5 @@
     width: 35vw;
     max-width: 500px;
     padding-left: 4.5vw;
-  }
-  .destination-second {
-    align-items: center;
-    width: 445px;
-  }
-  .destination-second .relevant-info {
-    width: 100%;
   }
 }

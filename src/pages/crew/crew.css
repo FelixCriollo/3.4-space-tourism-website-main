@@ -24,24 +24,6 @@
 .crew-info__role {
   color: var(--middle);
 }
-.crew-controls {
-  order: -1;
-  width: 88px;
-  height: 10px;
-  margin: auto;
-  margin-bottom: 32px;
-  display: flex;
-  justify-content: space-between;
-}
-.control {
-  width: 10px;
-  height: 10px;
-  background: #979797;
-  border-radius: 100px;
-}
-.control--on {
-  background: var(--lighter);
-}
 .crew-info__name {
   text-transform: uppercase ;
   margin: 8px auto 16px auto;
@@ -70,16 +52,12 @@
     order: 1;
     position: absolute;
     margin: auto;
-    left: 50%;
+    left: 50%; 
     bottom: 0;
     margin-top: 50px;
     transform: translateX(-50%);
     width: 51vw;
     max-height: 491px;
-  }
-  .crew-controls {
-    order: 0;
-    margin-top: 38px;
   }
   .crew-info {
     width: 458px;
@@ -119,16 +97,5 @@
   .crew-info__name {
     font-size: 56px;
     margin-left: 0;
-  }
-  .crew-controls {
-    margin-left: 0;
-    margin-top: 10vh;
-    height: 15px;
-    width: 132px;
-  }
-  .control {
-    width: 15px;
-    height: 15px;
-    cursor: pointer;
   }
 }

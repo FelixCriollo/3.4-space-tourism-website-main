@@ -1,0 +1,46 @@
+.crew-controls {
+  order: -1;
+  width: 88px;
+  height: 10px;
+  margin: auto;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+.control {
+  width: 10px;
+  height: 10px;
+  background: #979797;
+  border-radius: 100px;
+  transition: ease-in-out all .5s;
+}
+.control--on {
+  background: var(--lighter);
+  transition: ease-in-out all .5s;
+}
+
+@media (min-width: 664px) {
+  .crew-controls {
+    order: 0;
+    margin-top: 38px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .crew-controls {
+    margin-left: 0;
+    margin-top: 10vh;
+    height: 15px;
+    width: 132px;
+  }
+  .control {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+  }
+  .control:hover,
+  .control:focus {
+    background: var(--lighter);
+    transition: ease-in-out all .5s;
+  }
+}

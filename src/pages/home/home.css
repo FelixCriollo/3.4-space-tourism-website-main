@@ -7,12 +7,15 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .left {
   margin-bottom: 50px;
 }
+
 .title {
   margin: 16px 0 24px 0;
 }
+
 .explore {
   display: block;
   background: var(--lighter);
@@ -30,15 +33,19 @@
   .home {
     padding: 70px 39px 80px 0;
   }
-  .left {
-    margin-bottom: unset;
-  }
-  .title {
-    margin: 16px 0 12px 0;
-  }
+  
   .home .relevant-info {
     width: 444px;
   }
+  
+  .left {
+    margin-bottom: unset;
+  }
+  
+  .title {
+    margin: 16px 0 12px 0;
+  }
+  
   .explore {
     font-size: 32px;
     letter-spacing: 2px;
@@ -58,9 +65,11 @@
     flex-direction: row;
     align-items: flex-end;
   }
+
   .title {
     margin: 24px 0 24px 0;
   }
+  
   .explore {
     position: relative;
     margin-bottom: 0;
@@ -90,6 +99,7 @@
     animation: home-pulse-2 1.2s infinite;
     z-index: -1;
   }
+  
   @keyframes home-pulse {
     0% {
       background: #fff;

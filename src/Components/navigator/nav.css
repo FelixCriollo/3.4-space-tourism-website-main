@@ -92,10 +92,6 @@
 
 /* DESKTOP */
 @media (min-width: 1024px) {
-  .nav__text span {
-    display: inline;
-  } 
-
   .nav-list-container {
     max-width: 830px;
     width: 57.8vw;
@@ -108,14 +104,13 @@
     max-width: 542px;
     margin: 0 auto;
   }
-
+  
   .nav__text {
     position: relative;
     font-size: 16px;
     letter-spacing: 2.36px;
     cursor: pointer;
   }
-
   .nav__text::after {
     position: absolute;
     content: '';
@@ -133,4 +128,7 @@
     background: rgba(255, 255, 255, .5);
     transition: cubic-bezier(.3,.19,0,1.19) all .6s;
   }
+  .nav__text span {
+    display: inline;
+  } 
 }

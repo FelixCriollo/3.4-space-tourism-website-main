@@ -1,6 +1,14 @@
 #technology {
   text-align: center;
 }
+
+.tech-name {
+  font-size: 24px;
+  text-align: center;
+  margin: 8px 0 16px 0;
+  text-transform: uppercase;
+}
+
 .technology-info {
   position: relative;
   padding-top: 236px;
@@ -13,34 +21,6 @@
   height: 170px;
   z-index: -1;
 }
-.change-tech {
-  order: -1;
-  width: 152px;
-  height: 40px;
-  margin: auto;
-  margin-bottom: 26px;
-  display: flex;
-  justify-content: space-between;
-}
-.tech-item {
-  text-align: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 100px;
-  border: 1px solid var(--middle);
-  font-size: 16px;
-  padding-top: 10px;
-}
-.tech-item--active {
-  background-color: var(--lighter);
-  color: var(--strong) !important;
-}
-.tech-name {
-  font-size: 24px;
-  text-align: center;
-  margin: 8px 0 16px 0;
-  text-transform: uppercase;
-}
 
 @media (min-width: 664px) {
   #technology {
@@ -49,36 +29,25 @@
     padding-right: 39px;
     height: unset;
   }
+
+  .tech-name {
+    font-family: "Bellefair", serif;
+    font-size: 40px;
+  }
+
   .technology-info {
     padding-top: 426px;
+    text-align: center;
   }
-  .change-tech {
-    width: 210px;
-    height: 60px;
-    margin-bottom: 44px;
+  .technology-info .relevant-info {
+    width: 456px;
+    margin: auto;
   }
-  .tech-item {
-    width: 58px;
-    height: 58px;
-    font-size: 24px;
-    padding-top: 18px;
-  } 
   .technology-info__img {
     top: 6vh;
     left: -39px;
     width: calc(100% + 78px);
     height: 310px;
-  }
-  .technology-info {
-    text-align: center;
-  }
-  .tech-name {
-    font-family: "Bellefair", serif;
-    font-size: 40px;
-  }
-  .technology-info .relevant-info {
-    width: 456px;
-    margin: auto;
   }
 }
 @media (min-width: 1024px) {
@@ -88,6 +57,11 @@
     padding-top: 4vh;
     padding-right: 0;
   }
+  
+  .tech-name {
+    font-size: 56px;
+  }
+
   .technology-info {
     padding-top: 0;
     display: flex;
@@ -97,23 +71,6 @@
     display: flex;
     flex-direction: row;
     text-align: left;
-  }
-  .change-tech {
-    width: 80px;
-    height: 304px;
-    margin-bottom: 0;
-    margin-right: 5.6vw;
-    flex-direction: column;
-  }
-  .tech-item {
-    width: 80px;
-    height: 80px;
-    font-size: 32px;
-    padding-top: 24px;
-    cursor: pointer;
-  }
-  .tech-name {
-    font-size: 56px;
   }
   .technology-info__img {
     width: 36.5vw;
