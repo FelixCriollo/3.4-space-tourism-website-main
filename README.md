@@ -1,10 +1,23 @@
-# Getting Started with Create React App
+# Welcome ⚡⚡⚡
+## The practice
+In first place, this is my first time usign react outside the tutorials.  Use `props` and the hooks `useState` and `useEffect`. Too use react router for build urls and so separare the content the user see in the page, use `Link`, `BrowserRouter`, `Routes`, `Route` and `useLocation`.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+For the style of the page use vanilla css,  i guess. The think is what i use the vanilla sintax of css
 
-## Available Scripts
+Also i work with fetch and with promises 
 
-In the project directory, you can run:
+Finally use `create-react-app` for have the basic config, try to made my own config but not works :d
+
+## Questions to improve
+- How i can improve the order of the files on this project or in general? 
+- How i can add styles of better way?
+- How i can improve the performance of the page?
+
+
+
+Sorry for my bad english
+
+# Scripts of the project
 
 ### `npm start`
 
@@ -38,33 +51,3 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
